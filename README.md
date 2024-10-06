@@ -1,49 +1,9 @@
-## Foundry
+# Smart Token ($SMART)
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Smart token is a token that can only be used my smart wallets (ERC-4337, Gnosis, any smart contract) until EIP-7702 is deplyoed. All approvals user TSTORE and TLOAD preventing EOA (secp256k1) accounts from handling the token.
 
-Foundry consists of:
+To claim call `smart.prepareClaim()` followed by `smart.claim()` in a batch transaction. If successful the contract will mint `500_000e18` tokens every 10 minutes, with a total supply cap of `1_000_000_000e18`. If you accidentally transfer your tokens to an EOA, they are effectively burned.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
 
 ### Deploy
 
