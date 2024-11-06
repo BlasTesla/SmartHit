@@ -3,7 +3,7 @@ pragma solidity ^0.8.26;
 
 import {TERC20} from "../lib/t-erc20/src/TERC20.sol";
 
-contract Smart is TERC20 {
+contract Shit is TERC20 {
     uint256 lastClaim;
     uint256 volatilityAccumulator;
 
@@ -61,18 +61,18 @@ contract Smart is TERC20 {
         _mint(msg.sender, amount);
     }
 
-    function prepapreClaim() external {
+    function prepareClaim() external {
         assembly {
             tstore(0, 1)
         }
     }
 
     function name() public view virtual override returns (string memory) {
-        return "Smart Token";
+        return "Smart Hit";
     }
 
     function symbol() public view virtual override returns (string memory) {
-        return "SMART";
+        return "SHIT";
     }
 
     function permit(address, address, uint256, uint256, uint8, bytes32, bytes32) public override {
